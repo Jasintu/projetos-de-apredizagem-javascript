@@ -1,0 +1,74 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+
+}
+
+body{
+    background-color: chocolate;
+}
+
+#container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    /*estilo*/
+
+    height: 100vh;
+    width: 100vw;
+
+}
+
+.numbers{
+    display: flex;
+    justify-content: center;
+
+
+    /*estilo*/
+
+}
+
+#mathematicalOperations{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+
+    /*estilo*/
+
+}
+
+.btn{
+    height: 50px;
+    width: 50px;
+}
+
+#buttonEqual{
+    height: 50px;
+    width: 100px;
+}
+
+#buttonAC{
+    height: 50px;
+    width: 100px;
+}
+
+.grid{
+    width: 250px;
+}
+
+#screen{
+    color: aliceblue;
+    background-color: black;
+    justify-content: center;
+    width: 250px;
+    height: 50px;
+
+}
+
+#txtcalculadora{
+    text-align: center;
+    color: aliceblue;
+}

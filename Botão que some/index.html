@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oi, Ayane</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+<body id="sla">
+    <h1 id="txt">Você quer me dar beijinhos?</h1>
+    <div class="container">
+        <div>
+            <button type="button" class="btn btn-primary" id="buttonYes">SIM</button>
+            <button type="button" class="btn btn-primary" id="buttonNo">NÃO</button>
+        </div>
+    </div>
+    <div class="container">
+        <div id="msgtxt">Felizmente eu (Henrique) desativei a opção não.
+        </div>
+    </div>
+    <div>
+        <div class="container">
+            <button type="button" class="btn btn-primary" id="querobutton">QUERO!</button>
+        </div>
+    </div>
+    <script>
+        let buttonYes = document.getElementById("buttonYes")
+       let buttonNo = document.getElementById("buttonNo") 
+       let msgtxt = document.getElementById("msgtxt")
+       let txt = document.getElementById("txt")
+       let querobutton = document.getElementById("querobutton")
+
+       buttonNo.addEventListener("mouseenter",function(){
+            buttonNo.style.display = "none"
+            msgtxt.style.display = "block"
+       })
+
+       buttonYes.addEventListener("click", function(){
+            txt.innerHTML = "Aperta sim novamente..."
+            msgtxt.style.display = "none"
+            buttonNo.style.display = "none"
+        buttonYes.addEventListener("click", function(){
+            buttonYes.style.display = "none"
+            txt.innerHTML = "Então você quer mesmo danada?"
+            querobutton.style.display = "block"
+       })
+       })
+
+       querobutton.addEventListener("click", function(){
+        txt.innerHTML = "Eu tambem quero XD"
+       })
+    </script>
+</body>
+</html>
