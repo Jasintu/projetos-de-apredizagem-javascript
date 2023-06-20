@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oi, Livia</title>
+    <style>
+        *{
+    padding: 0;
+    border: 0;
+    }
+
+    #sla{
+        background-color: blue;
+    }
+
+    #txt{
+        text-align: center;
+        color: aliceblue;
+    }
+
+    .container{
+        display: flex;
+        justify-content: center;
+    }
+
+    #msgtxt{
+        color: aliceblue;
+        display: none;
+    }
+
+    #querobutton{
+        display: none;
+    }
+
+    #buttonNo{
+        display: none;
+    }
+
+    #buttonYes{
+        display: none;
+    }
+
+    #img{
+        display: none;
+    }
+
+    #img2{
+        display: none;
+    }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+<body id="sla">
+    <h1 id="txt">oi</h1>
+    <div class="container">
+        <div>
+            <button type="button" class="btn btn-primary" id="buttonYes">SIM</button>
+            <button type="button" class="btn btn-primary" id="buttonNo">NÃO</button>
+            <button type="button" class="btn btn-primary" id="oibutton">Oi</button>
+        </div>
+    </div>
+    <div>
+        <div class="container">
+            <img src="image/imagem_2023-06-18_232429105.png" alt="" id="img">
+            <img src="image/image.png" alt="" id="img2">
+        </div>
+    </div>
+    <script>
+        let buttonYes = document.getElementById("buttonYes")
+       let buttonNo = document.getElementById("buttonNo") 
+       let msgtxt = document.getElementById("msgtxt")
+       let txt = document.getElementById("txt")
+       let oibutton = document.getElementById("oibutton")
+       let img = document.getElementById("img")
+
+       oibutton.addEventListener("click", function(){
+        oibutton.style.display = "none"
+        buttonNo.style.display = "inline"
+        buttonYes.style.display = "inline"
+        img.style.display = "inline"
+
+        txt.innerHTML = "Posso beijar seu pezinho?"
+       })
+
+       buttonNo.addEventListener("mouseenter", function(){
+            let h = window.innerHeight - 50
+            let w = window.innerWidth - 50
+            let pxRandom = Math.random()
+            this.style.position = "absolute"
+            this.style.left = pxRandom * w + "px"
+            this.style.top = pxRandom * h + "px"
+       })
+
+       buttonYes.addEventListener("click", function(){
+        img2.style.display = "inline"
+        img.style.display = "none"
+        buttonNo.style.display = "none"
+        buttonYes.style.display = "none"
+        txt.innerHTML = "Obrigado gostosa!"
+       })
+       //
+    </script>
+</body>
+</html>
