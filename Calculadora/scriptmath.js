@@ -16,36 +16,34 @@ let valueInScreen = document.getElementById("screen")
 
 numbers.forEach((el) =>{
     el.addEventListener("click", function(evt){
-        let n1 = valueInScreen.innerHTML+=evt.target.innerHTML
-        if(evt.target.innerHTML == "+"){
-            valueInScreen.innerHTML = n1
-            let n2 = n1.split("+")
-            buttonEqual.addEventListener("click", function(){
-                console.log(n1[0] + n1[1])
-            })
-
-            
-        }
-
+        let num = valueInScreen.innerHTML+=evt.target.innerHTML
+        let string = num.toString()
+        let finalMinus = string.split("-")
+        let finalPlus = string.split("+")
+        let finalMultipli = string.split("x")
+        let finalDivision = string.split("÷")
+        let finalPorcent = string.split("%")
+        buttonEqual.addEventListener("click", function(){
+            if(num.includes("x")){
+                valueInScreen.innerHTML = finalMultipli[0] * finalMultipli[1]
+            }
+            else if(num.includes("-")){
+                valueInScreen.innerHTML = finalMinus[1] - finalMinus[0]
+            }
+            else if(num.includes("+")){
+                valueInScreen.innerHTML = finalPlus[0] + finalPlus[1] 
+            }
+            else if(num.includes("÷")){
+                valueInScreen.innerHTML = finalDivision[1] / finalDivision[0]
+            }
+            else if(num.includes("%")){
+                valueInScreen.innerHTML = (finalPorcent[1] / 100) * finalPorcent[0]
+            }
+        })
     })
 })
 
 
-let mathOprators = {
-    sum : function(){
-        return n1 + n2
-    },
-    minus : function(){
-        return n1 - n2
-    },
-    division : function(){
-        return n1 / n2
-    },
-    multiplication : function(){
-        return n1 * n2
-    }
-}
-
 clean.addEventListener("click", function(){
-    valueInScreen.innerHTML = ""
+    valueInScreen.innerHTML = " "
 })
