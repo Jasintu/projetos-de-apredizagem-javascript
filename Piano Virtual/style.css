@@ -1,0 +1,45 @@
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+#divBlacks{
+    transform: translate(0%, 100%);
+}
+
+h1{
+    text-align: center;
+    padding: 180px;
+}
+
+.keyBlacks{
+    background-color: black;
+    color: white;
+    height: 150px;
+    width: 50px;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.keyBlacks:hover{
+    background-color: rgb(17, 17, 17);
+}
+
+.keyWhite{
+    width: 50px;
+    height: 250px;
+
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border: 0.5px solid black;
+    padding-top: 220px;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.keyWhite:hover{
+    background-color: rgb(202, 199, 199);
+    height: 249px;
+}
+
+#keyWhite{
+
+}
