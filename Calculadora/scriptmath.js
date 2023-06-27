@@ -25,7 +25,10 @@ numbers.forEach((el) =>{
         let finalDivision = string.split("÷")
         let finalPorcent = string.split("%")
 
-        let 
+        let plusBugFix = {
+            number1 : parseInt(finalPlus[0]),
+            number2 : parseInt(finalPlus[1]) 
+        }
 
         buttonEqual.addEventListener("click", function(){
             if(num.includes("x")){
@@ -35,7 +38,7 @@ numbers.forEach((el) =>{
                 screenResult.innerHTML = finalMinus[1] - finalMinus[0]
             }
             else if(num.includes("+")){
-                screenResult.innerHTML = finalPlus[0] + finalPlus[1] 
+                screenResult.innerHTML = plusBugFix.number1 + plusBugFix.number2
             }
             else if(num.includes("÷")){
                 screenResult.innerHTML = finalDivision[1] / finalDivision[0]
