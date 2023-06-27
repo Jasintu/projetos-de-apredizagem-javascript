@@ -25,8 +25,6 @@ body{
 .numbers{
     display: flex;
     justify-content: center;
-
-
     /*estilo*/
 
 }
@@ -47,7 +45,7 @@ body{
 
 #buttonEqual{
     height: 50px;
-    width: 100px;
+    width: 150px;
 }
 
 #buttonAC{
@@ -71,4 +69,14 @@ body{
 #txtcalculadora{
     text-align: center;
     color: aliceblue;
+}
+
+#screenResult{
+    width: 70px;
+    background-color: rgb(165, 164, 164);
+    color: black;
+}
+
+#screen{
+    width: 180px;
 }

@@ -8,6 +8,7 @@ let clean = document.getElementById("buttonAC")
 let numbers = document.querySelectorAll("button")
 let displaynone = document.getElementById("displaynoneoff")
 let buttonEqual = document.getElementById("buttonEqual")
+let screenResult = document.getElementById("screenResult")
 
 // exibiçao da tela
 let valueInScreen = document.getElementById("screen")
@@ -23,22 +24,26 @@ numbers.forEach((el) =>{
         let finalMultipli = string.split("x")
         let finalDivision = string.split("÷")
         let finalPorcent = string.split("%")
+
+        let 
+
         buttonEqual.addEventListener("click", function(){
             if(num.includes("x")){
-                valueInScreen.innerHTML = finalMultipli[0] * finalMultipli[1]
+                screenResult.innerHTML = finalMultipli[0] * finalMultipli[1]
             }
             else if(num.includes("-")){
-                valueInScreen.innerHTML = finalMinus[1] - finalMinus[0]
+                screenResult.innerHTML = finalMinus[1] - finalMinus[0]
             }
             else if(num.includes("+")){
-                valueInScreen.innerHTML = finalPlus[0] + finalPlus[1] 
+                screenResult.innerHTML = finalPlus[0] + finalPlus[1] 
             }
             else if(num.includes("÷")){
-                valueInScreen.innerHTML = finalDivision[1] / finalDivision[0]
+                screenResult.innerHTML = finalDivision[1] / finalDivision[0]
             }
             else if(num.includes("%")){
-                valueInScreen.innerHTML = (finalPorcent[1] / 100) * finalPorcent[0]
+                screenResult.innerHTML = (finalPorcent[1] / 100) * finalPorcent[0]
             }
+            valueInScreen.innerHTML = " "
         })
     })
 })
