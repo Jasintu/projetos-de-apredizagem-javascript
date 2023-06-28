@@ -3,6 +3,10 @@
     margin: 0;
 }
 
+.col{
+    cursor: pointer;
+}
+
 .container{
     display: flex;
     justify-content: center;
