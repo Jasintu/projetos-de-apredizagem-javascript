@@ -1,6 +1,8 @@
 "use strict"
 
-let pianoKeys = {
+//teclas brancas por click
+
+let pianoKeysWhite = {
     do1 : $("[name='do1']").click(()=>{
         let audio = $("#do1")[0]
         audio.play()
@@ -107,6 +109,8 @@ let pianoKeys = {
         audio.currentTime = 0
     })
 }
+
+//teclas pretas por click
 
 let blackKeys ={
     dore1 : $("#dore1").click(function(event){
@@ -231,7 +235,9 @@ let blackKeys ={
     }),
 }
 
-let keyboards = {
+//teclas brancas via teclado
+
+let keyboardsWhite = {
     q : $(document).keydown(function(event){        
         if (event.key === "q") {
             let audio = $("#do1")[0]
@@ -380,3 +386,169 @@ let keyboards = {
         }
     }),
 }
+
+//teclas pretas via teclado
+
+let keyBoardBlack = {
+    1 : $(document).keydown(function(event){
+            if (event.key === "1") {
+                let audio = $("#do1")[0]
+                let audio2 = $("#re1")[0]
+                audio.play()
+                audio2.play()
+                audio.currentTime = 0
+                audio2.currentTime = 0
+        }
+    }),
+    2 : $(document).keydown(function(event){
+            if (event.key === "2") {
+                let audio = $("#re1")[0]
+                let audio2 = $("#mi1")[0]
+                audio.play()
+                audio2.play()
+                audio.currentTime = 0
+                audio2.currentTime = 0
+        }
+    }),
+    3 : $(document).keydown(function(event){
+            if (event.key === "3") {
+            let audio = $("#fa1")[0]
+            let audio2 = $("#sol1")[0]
+            audio.play()
+            audio2.play()
+            audio.currentTime = 0
+            audio2.currentTime = 0
+        }
+    }),
+    4 : $(document).keydown(function(event){
+            if (event.key === "4") {
+                let audio = $("#sol1")[0]
+                let audio2 = $("#la1")[0]
+                audio.play()
+                audio2.play()
+                audio.currentTime = 0
+                audio2.currentTime = 0
+        }
+    }),
+    5 : $(document).keydown(function(event){
+            if (event.key === "5") {
+                let audio = $("#la1")[0]
+                let audio2 = $("#si1")[0]
+                audio.play()
+                audio2.play()
+                audio.currentTime = 0
+                audio2.currentTime = 0
+        }
+    }),
+    6 : $(document).keydown(function(event){
+            if (event.key === "6") {
+                let audio = $("#do2")[0]
+                let audio2 = $("#re2")[0]
+                audio.play()
+                audio2.play()
+                audio.currentTime = 0
+                audio2.currentTime = 0
+        }
+    }),
+    7 : $(document).keydown(function(event){
+            if (event.key === "7") {
+                let audio = $("#re2")[0]
+                let audio2 = $("#mi2")[0]
+                audio.play()
+                audio2.play()
+                audio.currentTime = 0
+                audio2.currentTime = 0
+        }
+    }),
+    8 : $(document).keydown(function(event){
+            if (event.key === "8") {
+                let audio = $("#fa2")[0]
+                let audio2 = $("#sol2")[0]
+                audio.play()
+                audio2.play()
+                audio.currentTime = 0
+                audio2.currentTime = 0
+        }
+    }),
+    9 : $(document).keydown(function(event){
+            if (event.key === "9") {
+                let audio = $("#sol2")[0]
+                let audio2 = $("#la2")[0]
+                audio.play()
+                audio2.play()
+                audio.currentTime = 0
+                audio2.currentTime = 0
+        }
+    }),
+    0 : $(document).keydown(function(event){
+            if (event.key === "0") {
+                let audio = $("#la2")[0]
+                let audio2 = $("#si2")[0]
+                audio.play()
+                audio2.play()
+                audio.currentTime = 0
+                audio2.currentTime = 0
+        }
+    }),
+    x : $(document).keydown(function(event){
+            if (event.key === "x") {
+                let audio = $("#do3")[0]
+                let audio2 = $("#re3")[0]
+                audio.play()
+                audio2.play()
+                audio.currentTime = 0
+                audio2.currentTime = 0
+        }
+    }),
+    c : $(document).keydown(function(event){
+            if (event.key === "c") {
+                let audio = $("#re3")[0]
+                let audio2 = $("#mi3")[0]
+                audio.play()
+                audio2.play()
+                audio.currentTime = 0
+                audio2.currentTime = 0
+        }
+    }),
+    v : $(document).keydown(function(event){
+            if (event.key === "v") {
+                let audio = $("#fa3")[0]
+                let audio2 = $("#sol3")[0]
+                audio.play()
+                audio2.play()
+                audio.currentTime = 0
+                audio2.currentTime = 0
+        }
+    }),
+    b : $(document).keydown(function(event){
+            if (event.key === "b") {
+                let audio = $("#fa3")[0]
+                let audio2 = $("#sol3")[0]
+                audio.play()
+                audio2.play()
+                audio.currentTime = 0
+                audio2.currentTime = 0
+        }
+    }),
+    n : $(document).keydown(function(event){
+            if (event.key === "n") {
+                let audio = $("#sol3")[0]
+                let audio2 = $("#la3")[0]
+                audio.play()
+                audio2.play()
+                audio.currentTime = 0
+                audio2.currentTime = 0
+        }
+    }),
+    m : $(document).keydown(function(event){
+            if (event.key === "m") {
+                let audio = $("#la3")[0]
+                let audio2 = $("#si3")[0]
+                audio.play()
+                audio2.play()
+                audio.currentTime = 0
+                audio2.currentTime = 0
+        }
+    }),
+}
+
