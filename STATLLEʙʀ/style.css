@@ -1,0 +1,26 @@
+*{
+    padding: 0px;
+    border: 0px;
+    font-family: 'Alkatra', cursive;
+    font-family: 'Climate Crisis', cursive;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body{
+    background-color: #101729;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+}
+
+.content{
+    display: flex;
+    font-size: 40px;
+}
+
+/*apenas */

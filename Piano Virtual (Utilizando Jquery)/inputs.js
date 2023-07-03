@@ -552,3 +552,15 @@ let keyBoardBlack = {
     }),
 }
 
+//local de criaçao de animaçoes de teclado
+
+$(document).keypress(function(){
+    $(".keyWhite").addClass("whiteKeysToggle") 
+    console.log("oi")
+})
+
+$(document).keypress(function(){
+    setTimeout(function() {
+    $(".keyWhite").removeClass("whiteKeysToggle") 
+    }, 100)
+})
