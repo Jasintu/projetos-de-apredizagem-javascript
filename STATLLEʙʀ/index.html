@@ -16,7 +16,7 @@
         <div class="container">
             <div class="content">
                 <div>
-                    <img src="icones/brasilmapsmall.png" style="width: 40; height: 40px; mix-blend-mode: color-burn;">
+                    <img src="icones/brasilmapsmall.png" id="brasilIcon">
                     STATE
                 </div>
                 <span style="color: green;">
@@ -31,7 +31,7 @@
     <div class="container">
         <div>
             <div class="string"></div>
-            <p>Você consegue adivinhar que estado é este?</p>
+            <h6>Você consegue adivinhar que estado é este?</h6>
         </div>
     </div>
     <div class="container">
@@ -39,7 +39,7 @@
     </div>
     <div>
         <div class="container">
-            <input type="text" class="boxWriteState" placeholder="Estado, Território..."> 
+            <input type="text" class="boxWriteState" placeholder="Estado, Território..." aria-placeholder=""> 
             <button class="buttonSubmti"> 🌍 ADIVINHAR</button>
         </div>
         <div class="container">
@@ -57,18 +57,14 @@
             <h3>F.Q.A.</h1>
             <div>
                 <details>
-                    <summary>Quando um novo jogo esta disponivel?</summary>
-                    Todos os dias a partir das 00:00.
+                    <summary>Quando um novo jogo esta disponivel?   <img src="icones/angle-arrow-down_icon-icons.com_73683 (1).png" alt="" class="iconArrow"></summary>
+                    <p>Todos os dias a partir das 00:00.</p>
                 </details>
             </div>
             <div>
                 <details>
-                    <summary>Como consigo ir para o proximo round?</summary>
-                </details>
-            </div>
-            <div>
-                <details>
-                    <summary>Quando um novo jogo esta disponível?</summary>
+                    <summary>Como consigo ir para o proximo round?   <img src="icones/angle-arrow-down_icon-icons.com_73683 (1).png" alt="" class="iconArrow"></summary>
+                    <p>Você deve acertar o estado corretamente pelo seu território.</p>
                 </details>
             </div>
         </div>
@@ -76,5 +72,6 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="hiddenstates.js"></script>
+    <script src="animationEscale.js"></script>
 </body>
 </html>

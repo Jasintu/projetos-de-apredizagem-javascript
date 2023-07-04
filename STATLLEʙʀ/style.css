@@ -35,6 +35,20 @@ body{
     height: 300px;
     padding: -30px;
     margin-bottom: 23px;
+    animation: introAnimation 1s ease-in-out
+}
+
+.iconArrow{
+    width: 15px;
+    height: 15px;
+    filter: brightness(0) invert(1);
+
+}
+
+#brasilIcon{
+    width: 40px;
+    height: 40px;
+    filter: brightness(0) invert(1);
 }
 
 .boxWriteState{
@@ -65,7 +79,6 @@ body{
     border-radius: 4px;
     border: 2px solid rgb(255, 255, 255);
     color: aliceblue;
-
 }
 
 .divlock{
@@ -82,7 +95,7 @@ body{
 
 /*apenas para tags*/
 
-p{
+h6{
     text-align: center;
     margin: 9px;
 }
@@ -91,7 +104,7 @@ h3{
     margin-top: 30px;
     margin-bottom: 10px;
     padding-bottom: 5px;
-    border-bottom: 2px solid rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(255, 255, 255);
 }
 
 details{
@@ -99,5 +112,55 @@ details{
     margin-bottom: 10px;
     padding-top: 5px;
     padding-bottom: 10px;
-    border-bottom: 2px solid rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(255, 255, 255);
 }
+
+p {  
+    text-align: center;
+    margin: 9px;
+    animation: slideDown 0.5s;
+}
+
+summary::marker{
+    color: transparent;
+}
+
+/*animaçoes*/
+
+@keyframes introAnimation {
+    0% {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+    100% {
+      opacity: 2;
+      transform: scale(1);
+    }
+}
+
+@keyframes slideDown {
+    0% {
+      transform: translateY(-40%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes girar {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(-180deg);
+    }
+  }
+
+  @keyframes girarReverse {
+    0% {
+      transform: rotate(-180deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
