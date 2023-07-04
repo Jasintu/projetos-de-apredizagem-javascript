@@ -62,9 +62,5 @@ const statsterritory = {
 
 let NumberRandom = Math.round(Math.random() * 26)
 
-console.log(NumberRandom)
-
-
 $("#localimage").append(`<img src="${statsterritory[NumberRandom]}" alt="" id="imgstate"></img>`)
 
-console.log("Sai daqui seu curioso!")

@@ -39,8 +39,32 @@
     </div>
     <div>
         <div class="container">
-            <input type="text" class="boxWriteState" placeholder="Estado, Território..." aria-placeholder=""> 
-            <button class="buttonSubmti"> 🌍 ADIVINHAR</button>
+            <div id="customDropdown">
+                <input type="text" class="boxWriteState" placeholder="Estado, Território..." list="states" id="statesInput">
+                <div class="dropdownList">
+                    <option value="AC" class="brstate">Acre</option>
+                    <option value="AL" class="brstate">Alagoas</option>
+                    <option value="AP" class="brstate">Amapá</option>
+                    <option value="AM" class="brstate">Amazonas</option>
+                    <option value="BA" class="brstate">Bahia</option>
+                    <option value="CE" class="brstate">Ceará</option>
+                    <option value="DF" class="brstate">Distrito Federal</option>
+                    <option value="ES" class="brstate">Espírito Santo</option>
+                    <option value="GO" class="brstate">Goiás</option>
+                    <option value="MA" class="brstate">Maranhão</option>
+                    <option value="MT" class="brstate">Mato Grosso</option>
+                    <option value="MS" class="brstate">Mato Grosso do Sul</option>
+                    <option value="MG" class="brstate">Minas Gerais</option>
+                    <option value="PA" class="brstate">Pará</option>
+                    <option value="PB" class="brstate">Paraíba</option>
+                    <option value="PR" class="brstate">Paraná</option>
+                    <option value="PE" class="brstate">Pernambuco</option>
+                    <option value="PI" class="brstate">Piauí</option>
+                    <option value="RJ" class="brstate">Rio de Janeiro</option>
+                    <option value="RN" class="brstate">Rio Grande do Norte</option>
+                </div>
+            </div>
+            <button id="buttonSubmti"> 🌍 ADIVINHAR</button>
         </div>
         <div class="container">
             <div class="divlock">ADIVINHAR 1 / 4</div>
@@ -57,13 +81,13 @@
             <h3>F.Q.A.</h1>
             <div>
                 <details>
-                    <summary>Quando um novo jogo esta disponivel?   <img src="icones/angle-arrow-down_icon-icons.com_73683 (1).png" alt="" class="iconArrow"></summary>
+                    <summary>Quando um novo jogo esta disponivel?</summary>
                     <p>Todos os dias a partir das 00:00.</p>
                 </details>
             </div>
             <div>
                 <details>
-                    <summary>Como consigo ir para o proximo round?   <img src="icones/angle-arrow-down_icon-icons.com_73683 (1).png" alt="" class="iconArrow"></summary>
+                    <summary>Como consigo ir para o proximo round?</summary>
                     <p>Você deve acertar o estado corretamente pelo seu território.</p>
                 </details>
             </div>
