@@ -40,7 +40,7 @@
     <div>
         <div class="container">
             <div id="customDropdown">
-                <input type="text" class="boxWriteState" placeholder="Estado, Território..." list="states" id="statesInput">
+                <input type="text" class="boxWriteState" placeholder="Estado, Território..." list="states" id="stateInput">
                 <div class="dropdownList">
                     <option value="AC" class="brstate">Acre</option>
                     <option value="AL" class="brstate">Alagoas</option>
@@ -64,6 +64,7 @@
                     <option value="RN" class="brstate">Rio Grande do Norte</option>
                 </div>
             </div>
+            <canvas id="confetti-canvas"></canvas>
             <button id="buttonSubmti"> 🌍 ADIVINHAR</button>
         </div>
         <div class="container">
@@ -88,14 +89,14 @@
             <div>
                 <details>
                     <summary>Como consigo ir para o proximo round?</summary>
-                    <p>Você deve acertar o estado corretamente pelo seu território.</p>
+                    <p>Você deve acertar o estado corretamente pelo seu território para ir para próxima rodada.</p>
                 </details>
             </div>
         </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="hiddenstates.js"></script>
-    <script src="animationEscale.js"></script>
+    <script src="scriptjs/hiddenstates.js"></script>
+    <script src="scriptjs/canva.js"></script>
 </body>
 </html>

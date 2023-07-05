@@ -62,6 +62,7 @@ body{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+
 #buttonSubmti{
     background-color: #1d253b;
     margin-left: 5px;
@@ -92,44 +93,11 @@ body{
     padding: 1px;
 }
 
-/*apenas para tags*/
-
-h6{
-    text-align: center;
-    margin: 9px;
-}
-
-h3{
-    margin-top: 30px;
-    margin-bottom: 10px;
-    padding-bottom: 5px;
-    border-bottom: 1px solid rgb(255, 255, 255);
-}
-
-details{
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding-top: 5px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid rgb(255, 255, 255);
-}
-
-p {  
-    text-align: center;
-    margin: 9px;
-    animation: slideDown 0.5s;
-}
-
-summary {
-    list-style-type: none;
-    position: relative;
-}
-
-summary::before {
-    content: "ᐳ"; 
-    position: absolute;
-    left: 300px;
-    transform: rotate(90deg);
+#confetti-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
 }
 
 /*vizualizaçao da lista de estados*/
@@ -170,6 +138,62 @@ summary::before {
     color: aliceblue;
     font-weight: 400;
 }
+
+/*apenas para tags*/
+
+h6{
+    text-align: center;
+    margin: 9px;
+}
+
+h3{
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+details{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    width: 300px;
+    text-align: center;
+}
+
+p {  
+    text-align: center;
+    margin: 9px;
+    animation: slideDown 0.5s;
+    word-wrap: break-word;
+    width: 300px;
+}
+
+summary {
+    list-style-type: none;
+    position: relative;
+}
+
+summary::before {
+    content: "ᐳ"; 
+    position: absolute;
+    left: 300px;
+    transform: rotate(-90deg);
+    animation: girarReverse 0.1s linear;
+}
+
+details[open] summary::before {
+    transform: rotate(90deg);
+    animation: girar 0.1s linear;
+}
+
+summary::after {
+    transform: rotate(90deg);
+    animation: girar 0.1s linear;
+}
+
 /*animaçoes*/
 
 @keyframes introAnimation {
@@ -194,18 +218,20 @@ summary::before {
 
   @keyframes girar {
     0% {
-      transform: rotate(0deg);
+      transform: rotate(-90deg);
     }
     100% {
-      transform: rotate(-180deg);
+      transform: rotate(90deg);
     }
   }
 
   @keyframes girarReverse {
     0% {
-      transform: rotate(-180deg);
+      transform: rotate(90deg);
     }
     100% {
-      transform: rotate(0deg);
+      transform: rotate(-90deg);
     }
   }
+
+
