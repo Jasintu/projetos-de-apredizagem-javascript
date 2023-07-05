@@ -30,6 +30,7 @@ const states = {
     26: 'TOCANTINS'
 }
 
+
 const statsterritory = {
     0: "territorios/Acre.png",
     1: "territorios/Alagoas.png",
@@ -57,25 +58,30 @@ const statsterritory = {
     23: "territorios/SantaCatarina.png",
     24: "territorios/SãoPaulo.png",
     25: "territorios/Sergipe.png",
-    26: "territorios/Tocantins.png"
+    26: "territorios/Tocantins.png",
 }
 
 let NumberRandom = Math.round(Math.random() * 26)
-
 $("#localimage").append(`<img src="${statsterritory[NumberRandom]}" alt="" id="imgstate"></img>`)
 
 /*dar resultado de vitória*/
-
-let result = String(states[NumberRandom])
+let resultStateToday = String(states[NumberRandom])
 
 $("#buttonSubmti").click(function(){
-    if($("#stateInput").val() == result){
-    console.log($("#stateInput").val())
 
+    let myVar = false;
+    
+    for (let chave in states) {
+        if (states[chave] === $("#stateInput").val()) {
+          myVar = true;
+          break
+        }
+    }
+    
+    if (myVar) {
+      console.log("A variável é igual a " + $("#stateInput").val())
+    } else {
+      console.log("A variável não é igual a nenhum estado")
     }
 })
 
-console.log(states[NumberRandom])
-console.log(NumberRandom)
-console.log(result)
-console.log(typeof result)
