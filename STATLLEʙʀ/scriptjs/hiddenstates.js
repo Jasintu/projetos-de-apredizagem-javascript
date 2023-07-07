@@ -51,8 +51,8 @@ const statsterritory = {
     16: "territorios/Pernambuco.png",
     17: "territorios/Piauí.png",
     18: "territorios/RioGrandeNorte.png",
-    19: "territorios/RioGrandeSul.png",
-    20: "territorios/RioJaneiro.png",
+    19: "territorios/RioJaneiro.png",
+    20: "territorios/RioGrandeSul.png",
     21: "territorios/Rondônia.png",
     22: "territorios/Roraima.png",
     23: "territorios/SantaCatarina.png",
@@ -202,8 +202,18 @@ $(`#buttonChance1`).click(function(e){
 
           } else if (restChance >= 5){
             //QUARTA CHANCE
-            $("#card1").replaceWith(`
-            <div id="finalLoss">${$("#chance1").val()} ❌</div>
+            $(`#card1`).css({"display" : "none"})
+            $("#buttonChance1").css({"display" : "none"})
+
+            $("#finalResult").append(`<div class="containerShow">
+            <div id="divShowState">${$("#chance1").val()} ❌</div>
+            </div>`)
+            $("#finalResult").append(`<div class="divlock"> ADIVINHAR 4 / 4</div>`)
+
+            $("#chancesInScreen").replaceWith(`
+            <div class="container">
+            <div id="finalLoss">A resposta correta era ${resultStateToday}.</div>
+            </div>
             `)
             
           }
