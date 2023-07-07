@@ -158,7 +158,7 @@ $(`#buttonChance1`).click(function(e){
     }
     
     if (myVar) {
-      console.log("tudo ok " + $(`#chance1`).val())
+      console.log("tudo ok " + $(``).val())
         if(resultStateToday === $(`#chance1`).val()){
 
           // efeito de confetti
@@ -168,53 +168,50 @@ $(`#buttonChance1`).click(function(e){
           createConfetti(buttonX, buttonY)
           animateConfetti()
 
+          $("#card1").replaceWith(`<div class="container">
+          <div id="divShowState">${$("#chance1").val()} 
+          🎉</div>
+          </div>`)
+
+
         }else{
           $(`#card1`).insertAfter(`#card2`)
+          //PRIMEIRA CHANCE
           restChance = restChance + 1
+          $("#chance2").replaceWith(`<div class="containerShow">
+          <div id="divShowState">${$("#chance1").val()} ❌</div>
+          </div>`)
+          $("#buttonChance2").replaceWith(`<div class="divlock"> ADIVINHAR 1 / 4</div>`)
+
           if(restChance == 3){
+            //SEGUNDA CHANCE
             $(`#card1`).insertAfter(`#card3`)
+            $("#chance3").replaceWith(`<div class="containerShow">
+            <div id="divShowState">${$("#chance1").val()} ❌</div>
+            </div>`)
+            $("#buttonChance3").replaceWith(`<div class="divlock"> ADIVINHAR 2 / 4</div>`)
+
+
           } else if(restChance == 4){
+            //TERCEIRA CHANCE
             $(`#card1`).insertAfter(`#card4`)
+            $("#chance4").replaceWith(`<div class="containerShow">
+            <div id="divShowState">${$("#chance1").val()} ❌</div>
+            </div>`)
+            $("#buttonChance4").replaceWith(`<div class="divlock"> ADIVINHAR 3 / 4</div>`)
+
           } else if (restChance >= 5){
-            alert("voce perdeu")
+            //QUARTA CHANCE
+            $("#card1").replaceWith(`
+            <div id="finalLoss">${$("#chance1").val()} ❌</div>
+            `)
+            
           }
         }
-
     } else {
-      console.log("A variável não é igual a nenhum estado")
+      
       alert("Estado desconhecido!")
     }
 })
 
-/*<         <div id="customDropdown">
-                <input type="text" class="boxWriteState" placeholder="Estado, Território..." list="states" id="chance1">
-                <div class="dropdownList">
-                    <option value="AC" class="brstate">Acre</option>
-                    <option value="AL" class="brstate">Alagoas</option>
-                    <option value="AP" class="brstate">Amapá</option>
-                    <option value="AM" class="brstate">Amazonas</option>
-                    <option value="BA" class="brstate">Bahia</option>
-                    <option value="CE" class="brstate">Ceará</option>
-                    <option value="DF" class="brstate">Distrito Federal</option>
-                    <option value="ES" class="brstate">Espírito Santo</option>
-                    <option value="GO" class="brstate">Goiás</option>
-                    <option value="MA" class="brstate">Maranhão</option>
-                    <option value="MT" class="brstate">Mato Grosso</option>
-                    <option value="MS" class="brstate">Mato Grosso do Sul</option>
-                    <option value="MG" class="brstate">Minas Gerais</option>
-                    <option value="PA" class="brstate">Pará</option>
-                    <option value="PB" class="brstate">Paraíba</option>
-                    <option value="PR" class="brstate">Paraná</option>
-                    <option value="PE" class="brstate">Pernambuco</option>
-                    <option value="PI" class="brstate">Piauí</option>
-                    <option value="RJ" class="brstate">Rio de Janeiro</option>
-                    <option value="RN" class="brstate">Rio Grande do Norte</option>
-                </div>
-            </div>
-
-
-
-
-<button id="buttonSubmti"> 🌍 ADIVINHAR</button>
-*/
 

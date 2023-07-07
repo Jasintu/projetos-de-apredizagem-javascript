@@ -77,15 +77,20 @@ button{
     color: aliceblue;
 }
 
-#buttonChance1:hover,
-#buttonChance2:hover,
-#buttonChance3:hover,
-#buttonChance4:hover
-{
-    background-color: #6f778a;
-}
 
 .divlock{
+    background-color: #21293f;
+    color: rgb(206, 210, 214);
+    width: 270px;
+    height: 30px;
+    margin: 2px;
+    margin-top: 4px;
+    border-radius: 5px;
+    text-align: center;
+    padding: 1px;
+}
+
+.divlockNone{
     background-color: #21293f;
     color: rgb(206, 210, 214);
     width: 475px;
@@ -104,12 +109,16 @@ button{
     pointer-events: none;
 }
 
-/*vizualizaçao da lista de estados*/
-
 #customDropdown {
     position: relative;
     display: inline-block;
 }
+
+.removeBug:hover{
+    background-color: #6f778a;
+}
+/*vizualizaçao da lista de estados*/
+
   
 .dropdownList {
     position: absolute;
@@ -142,6 +151,44 @@ button{
     color: aliceblue;
     font-weight: 400;
 }
+
+#divShowState{
+    background-color: #21293f;
+    color: rgb(206, 210, 214);
+    width: 240px;
+    height: 30px;
+    margin: 2px;
+    margin-top: 4px;
+    border-radius: 5px;
+    text-align: center;
+    padding: 1px;
+    border: 1px #fcfdff inset;
+    animation: slide-in 0.2s ease-in;
+}
+
+.containerShow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+    width: 700px;
+}
+
+.containerShow{
+    color: rgb(206, 210, 214);
+    width: 204px;
+    height: 30px;
+    margin: 2px;
+    margin-top: 4px;
+    border-radius: 5px;
+    text-align: center;
+    padding: 1px;
+}
+
+#finalLoss{
+    background-color: antiquewhite;
+}
+
 
 /*apenas para tags*/
 
@@ -178,6 +225,7 @@ p {
 summary {
     list-style-type: none;
     position: relative;
+    text-align: start;
 }
 
 summary::before {
@@ -238,4 +286,11 @@ summary::after {
     }
   }
 
-
+@keyframes slide-in {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

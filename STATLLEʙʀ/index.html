@@ -43,15 +43,15 @@
             <div id="buttonChance1"></div>
         </div>
         <div class="container" id="card2">
-            <div class="divlock" id="chance2">ADIVINHAR 1/ 4</div>
+            <div class="divlockNone" id="chance2">ADIVINHAR 1/ 4</div>
             <div id="buttonChance2"></div>
         </div>
         <div class="container" id="card3">
-            <div class="divlock" id="chance3"></div>
+            <div class="divlockNone" id="chance3"></div>
             <div id="buttonChance3"></div>
         </div>
         <div class="container" id="card4">
-            <div class="divlock" id="chance4"></div>
+            <div class="divlockNone" id="chance4"></div>
             <div id="buttonChance4"></div>
         </div>
     </div>
@@ -70,9 +70,15 @@
                     <p>Você deve acertar o estado corretamente pelo seu território para ir para próxima rodada.</p>
                 </details>
             </div>
+            <div>
+                <details>
+                    <summary>Porque apenas é aceito estados em maiusculo?</summary>
+                    <p>Para melhor funcionamento do script evitando problemas de informações passadas!</p>
+                </details>
+            </div>
         </div>
     </div>
-    
+
     <canvas id="confetti-canvas"></canvas>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="scriptjs/hiddenstates.js"></script>
