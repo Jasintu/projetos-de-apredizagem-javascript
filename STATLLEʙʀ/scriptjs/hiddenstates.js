@@ -146,8 +146,6 @@ let nowCard = 1
 
 
 $(`#buttonChance1`).click(function(e){
-  console.log($(`#chance1`).val())
-
     let myVar = false
     
     for (let key in states) {
@@ -158,7 +156,6 @@ $(`#buttonChance1`).click(function(e){
     }
     
     if (myVar) {
-      console.log("tudo ok " + $(``).val())
         if(resultStateToday === $(`#chance1`).val()){
 
           // efeito de confetti
@@ -168,15 +165,23 @@ $(`#buttonChance1`).click(function(e){
           createConfetti(buttonX, buttonY)
           animateConfetti()
 
-          $("#card1").replaceWith(`<div class="container">
-          <div id="divShowState">${$("#chance1").val()} 
+          $("#allChances").css({"display" : "none"})
+
+          $("#allChances").replaceWith(`<div class="container">
+          <div class="divlockNone">A RESPOSTA CORRETA ERA ${$("#chance1").val()} 
           🎉</div>
+          </div>
+          <div class="container">
+          <div>
+          <a href="index.html"><button id="replayButton"> JOGAR NOVAMENTE <img src="icones/ICONREPLAY-removebg-preview.png" alt="" id="iconReplay"></button></a></div>
           </div>`)
 
+          
 
         }else{
           $(`#card1`).insertAfter(`#card2`)
           //PRIMEIRA CHANCE
+          
           restChance = restChance + 1
           $("#chance2").replaceWith(`<div class="containerShow">
           <div id="divShowState">${$("#chance1").val()} ❌</div>
@@ -185,6 +190,7 @@ $(`#buttonChance1`).click(function(e){
 
           if(restChance == 3){
             //SEGUNDA CHANCE
+
             $(`#card1`).insertAfter(`#card3`)
             $("#chance3").replaceWith(`<div class="containerShow">
             <div id="divShowState">${$("#chance1").val()} ❌</div>
@@ -194,6 +200,7 @@ $(`#buttonChance1`).click(function(e){
 
           } else if(restChance == 4){
             //TERCEIRA CHANCE
+
             $(`#card1`).insertAfter(`#card4`)
             $("#chance4").replaceWith(`<div class="containerShow">
             <div id="divShowState">${$("#chance1").val()} ❌</div>
@@ -202,6 +209,7 @@ $(`#buttonChance1`).click(function(e){
 
           } else if (restChance >= 5){
             //QUARTA CHANCE
+
             $(`#card1`).css({"display" : "none"})
             $("#buttonChance1").css({"display" : "none"})
 
@@ -215,13 +223,35 @@ $(`#buttonChance1`).click(function(e){
             <div id="finalLoss">A resposta correta era ${resultStateToday}.</div>
             </div>
             `)
+            $("#allChances").append(`
+            <div class="container">
+            <div>
+            <a href="index.html"><button id="replayButton"> JOGAR NOVAMENTE <img src="icones/ICONREPLAY-removebg-preview.png" alt="" id="iconReplay"></button></a></div>
+            </div>`)
             
           }
         }
     } else {
       
-      alert("Estado desconhecido!")
+      setTimeout(function(){     
+        $("#containerErrorMsg").css({"display" : "flex"})
+        
+      },)
+
+      setTimeout(function(){
+
+        $("#containerErrorMsg").css({"animation" : "fadeInReverse 0.5s alternate"})
+        
+      }, 2000)
+      
+
+      setTimeout(function(){
+        
+        $("#containerErrorMsg").css({"display" : "none"})
+        $("#containerErrorMsg").css({"animation" : "fadeIn 0.5s alternate"})
+
+      }, 500)
+
     }
 })
-
 

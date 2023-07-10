@@ -28,6 +28,13 @@
             </div>
         </div>
     </header>
+    <div id="containerErrorMsg">
+        <div id="containermsg">
+            <div id="sirene">❌</div>
+        Estado desconhecido!
+        <div id="x">X</div>
+    </div>
+    </div>
     <div class="container">
         <div>
             <div class="string"></div>
@@ -37,7 +44,7 @@
     <div class="container">
         <div id="localimage"></div>
     </div>
-    <div>
+    <div id="allChances">
         <div class="container" id="card1">
             <input type="text" class="boxWriteState" placeholder="Estado, Território..." list="states" id="chance1">
             <div id="buttonChance1"></div>
@@ -78,9 +85,14 @@
                     <p>Para melhor funcionamento do script evitando problemas de informações passadas!</p>
                 </details>
             </div>
+            <div>
+                <details>
+                    <summary>Como sei se acertei?</summary>
+                    <p>Caso voce acerte corretamente seu botão se transformara em confetes com um 🎉 e caso erre sera exibido um ❌.</p>
+                </details>
+            </div>
         </div>
     </div>
-
     <canvas id="confetti-canvas"></canvas>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="scriptjs/hiddenstates.js"></script>
